@@ -5,13 +5,15 @@ module.exports = {
     "semi": ["error", "never", { 
       "beforeStatementContinuationChars": "always" 
     }],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "prettier/prettier": 
       [
         "error",
         {
           singleQuote: true,
-          trailingComma: "all"
+          trailingComma: "all",
+          semi: false,
         }
       ],
     "import/no-unresolved": "off",
