@@ -17,7 +17,20 @@ module.exports = {
         }
       ],
     "import/no-unresolved": "off",
-    "import/extensions": [2, "never", { "mjs": "always"}],
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        ignorePackages: true,
+        pattern: {
+          js: "never",
+          jsx: "never",
+          ts: "never",
+          tsx: "never",
+          vue: "never",
+        }
+      }
+   ],
     "import/prefer-default-export": "off",
     "func-names": "off",
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
